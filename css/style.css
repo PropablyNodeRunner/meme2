@@ -1,0 +1,203 @@
+@font-face {
+  font-family: "CustomFont";
+  src: url("../fonts/211ec60062daca5e-s.p.woff2") format("woff2"),
+    url("../fonts/211ec60062daca5e-s.p.woff2") format("woff");
+  font-style: normal;
+}
+
+body {
+  font-family: "CustomFont", sans-serif;
+  color: #6e4d1b;
+  /* Set default text color */
+}
+
+/* body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+} */
+
+.navbar-logo {
+  width: 80px;
+  height: 80px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-logo:hover {
+  transform: rotate(15deg) scale(1.1);
+}
+
+.btn-animate {
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-animate:hover {
+  transform: scale(1.1);
+}
+
+a {
+  text-decoration: none;
+  color: #6e4d1b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: #6e4d1b;
+}
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.2); /* Transparent white */
+  backdrop-filter: blur(10px); /* Blurry effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  border-bottom: 3px solid #6e4d1b; /* Bottom border */
+  padding: 10px 20px;
+}
+.btn-custom {
+  border: 2px solid #6e4d1b !important; /* Button border color */
+  color: #6e4d1b !important; /* Button text color */
+  background-color: transparent; /* Keep background transparent */
+  transition: all 0.3s ease-in-out;
+  font-weight: 700;
+}
+
+.btn-custom:hover {
+  background-color: #6e4d1b !important; /* Button background on hover */
+  color: #fff !important; /* Text color on hover */
+}
+.nav-link {
+  position: relative;
+  color: #6e4d1b !important; /* Default text color */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px; /* Position the underline below the text */
+  width: 0;
+  height: 2px; /* Thickness of the line */
+  background-color: #6e4d1b; /* Line color */
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #6e4d1b !important; /* Keep the text color on hover */
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+.hover-effect:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+}
+.bg-custom {
+  background-color: #6e4d1b !important;
+}
+.bg-lightgreen {
+  color: #bcdfbc !important;
+}
+.slider-container {
+  width: 98%;
+  margin: 0;
+  padding: 30px 0;
+}
+
+.slick-slide {
+  margin: 0 30px; /* Add space between images */
+}
+
+.slick-slide img {
+  width: 100%;
+  height: 150px; /* Set fixed height */
+  object-fit: cover; /* Ensure the image fills the area properly */
+  border-radius: 10px;
+}
+
+/* Fix spacing issue by adjusting slick-track */
+.slick-list {
+  margin: 0 -30px; /* Negate the margin on slides */
+}
+#about {
+  height: 90vh;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("/images/new\ banner.jpg") no-repeat center center;
+  background-size: cover;
+}
+.w--65 {
+  width: 70% !important;
+}
+.hgh-fw {
+  font-weight: 800;
+  font-size: 3rem;
+}
+.mobile-home {
+  display: none !important;
+}
+.desktop-home {
+  display: flex !important;
+}
+@media (max-width: 1024px) {
+  .mobile-home {
+    display: flex !important;
+    margin-bottom: 50px;
+    height: auto !important;
+  }
+  .desktop-home {
+    display: none !important;
+  }
+  #about {
+    height: auto !important;
+  }
+}
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .mobile-home {
+    display: flex !important;
+    margin-bottom: 50px;
+    height: auto !important;
+  }
+  .desktop-home {
+    display: none !important;
+  }
+  #about {
+    height: auto !important;
+  }
+  .slick-slide img {
+    height: 200px; /* Set fixed height */
+  }
+  #video {
+    min-height: auto !important;
+  }
+}
+@media (max-width: 480px) {
+  .mobile-home {
+    display: flex !important;
+    margin-bottom: 50px;
+    height: auto !important;
+  }
+  .desktop-home {
+    display: none !important;
+  }
+  #about {
+    height: auto !important;
+  }
+  .slick-slide img {
+    height: 200px; /* Set fixed height */
+  }
+  #video {
+    min-height: auto !important;
+  }
+}
